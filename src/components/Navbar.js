@@ -4,18 +4,12 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  
-  // Scroll progress indicator
   const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
+  const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -34,11 +28,9 @@ export default function Navbar() {
         style={{
           scaleX,
           position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          height: '4px',
-          background: 'var(--gradient-accent)',
+          top: 0, left: 0, right: 0,
+          height: '2px',
+          background: 'var(--text-primary)',
           transformOrigin: '0%',
           zIndex: 1000,
         }}
@@ -46,63 +38,54 @@ export default function Navbar() {
       <motion.nav 
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        transition={{ type: 'spring', stiffness: 100, damping: 20 }}
-        className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'py-4' : 'py-6'}`}
+        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         style={{ 
-          paddingLeft: '40px', 
-          paddingRight: '40px', 
-          width: '100%', 
-          boxSizing: 'border-box',
-          background: scrolled ? 'rgba(5, 5, 5, 0.8)' : 'transparent',
-          backdropFilter: scrolled ? 'blur(20px)' : 'none',
-          borderBottom: scrolled ? '1px solid var(--glass-border)' : '1px solid transparent'
+          position: 'fixed',
+          top: 0,
+          width: '100%',
+          zIndex: 50,
+          transition: 'all 0.3s ease',
+          paddingTop: scrolled ? '1rem' : '2rem',
+          paddingBottom: scrolled ? '1rem' : '2rem',
+          background: scrolled ? 'var(--bg-secondary)' : 'transparent',
+          borderBottom: scrolled ? '1px solid var(--border-color)' : '1px solid transparent',
+          backdropFilter: scrolled ? 'blur(10px)' : 'none'
         }}
       >
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: 0 }}>
+        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <motion.a 
             href="#home" 
-            className="logo" 
-            style={{ fontSize: '1.8rem', fontWeight: 800, fontFamily: 'Outfit, sans-serif', letterSpacing: '-0.05em' }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            style={{ fontSize: '1.25rem', fontWeight: 700, letterSpacing: '-0.02em', color: 'var(--text-primary)' }}
           >
-            AJNAS<span className="text-gradient">.</span>
+            Ajnas Ashkath
           </motion.a>
 
           {/* Desktop Nav */}
-          <div style={{ display: 'flex', gap: '2.5rem', alignItems: 'center' }} className="hidden-mobile">
+          <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }} className="hidden-mobile">
             {navLinks.map((link) => (
               <a 
                 key={link.name} 
                 href={link.href} 
                 style={{ 
                   color: 'var(--text-secondary)', 
-                  fontWeight: 600, 
+                  fontWeight: 500, 
                   fontSize: '0.9rem', 
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.05em',
-                  transition: 'color 0.3s' 
+                  transition: 'color 0.2s' 
                 }} 
-                onMouseEnter={(e) => {
-                  e.target.style.color = 'var(--text-primary)';
-                  e.target.style.textShadow = '0 0 10px rgba(255,255,255,0.5)';
-                }} 
-                onMouseLeave={(e) => {
-                  e.target.style.color = 'var(--text-secondary)';
-                  e.target.style.textShadow = 'none';
-                }}
+                onMouseEnter={(e) => e.target.style.color = 'var(--text-primary)'} 
+                onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
               >
                 {link.name}
               </a>
             ))}
           </div>
 
-          {/* Social / Contact Header */}
-          <div style={{ display: 'flex', gap: '1.2rem' }} className="hidden-mobile">
+          {/* Social Icons */}
+          <div style={{ display: 'flex', gap: '1rem' }} className="hidden-mobile">
             {[
-              { icon: <Github size={20} />, url: 'https://github.com/Ajnas' },
-              { icon: <Linkedin size={20} />, url: 'https://linkedin.com/in/AjnasAshkath' },
-              { icon: <Mail size={20} />, url: 'mailto:ajnasashkath@gmail.com' }
+              { icon: <Github size={18} />, url: 'https://github.com/Ajnas' },
+              { icon: <Linkedin size={18} />, url: 'https://linkedin.com/in/AjnasAshkath' },
+              { icon: <Mail size={18} />, url: 'mailto:ajnasashkath@gmail.com' }
             ].map((social, i) => (
               <motion.a 
                 key={i}
@@ -110,22 +93,15 @@ export default function Navbar() {
                 target={social.url.startsWith('http') ? "_blank" : "_self"} 
                 rel="noreferrer" 
                 style={{ 
-                  color: 'var(--text-primary)',
-                  background: 'rgba(255,255,255,0.05)',
-                  padding: '10px',
-                  borderRadius: '50%',
+                  color: 'var(--text-secondary)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  border: '1px solid rgba(255,255,255,0.1)'
+                  padding: '8px',
+                  borderRadius: '8px',
+                  transition: 'background 0.2s, color 0.2s'
                 }}
-                whileHover={{ 
-                  scale: 1.1, 
-                  background: 'rgba(255,255,255,0.1)',
-                  borderColor: 'rgba(255,255,255,0.3)',
-                  boxShadow: '0 0 15px rgba(255,255,255,0.2)'
-                }}
-                whileTap={{ scale: 0.9 }}
+                whileHover={{ background: 'var(--border-color)', color: 'var(--text-primary)' }}
               >
                 {social.icon}
               </motion.a>
