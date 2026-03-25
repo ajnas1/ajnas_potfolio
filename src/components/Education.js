@@ -26,9 +26,9 @@ export default function Education() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
-          <h2 className="section-title">Education & Credentials <span className="serif">.</span></h2>
+          <h2 className="section-title">Education, Certifications & Awards <span className="serif">.</span></h2>
           <p className="section-subtitle">
-            Formal degrees and continued learning modules.
+            Formal degrees, continued learning modules, and recognitions.
           </p>
         </motion.div>
 
@@ -60,14 +60,14 @@ export default function Education() {
             </div>
           </motion.div>
 
-          {/* Certifications */}
+          {/* Certifications & Awards */}
           <motion.div
             variants={cardVariants}
             className="bento-panel"
             style={{ padding: '2.5rem' }}
           >
             <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-              <span style={{ color: 'var(--text-tertiary)', fontSize: '0.85rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '1.5rem' }}>Certifications</span>
+              <span style={{ color: 'var(--text-tertiary)', fontSize: '0.85rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '1.5rem' }}>Certifications & Awards</span>
 
               <ul style={{ 
                 listStyleType: 'none', 
@@ -77,6 +77,11 @@ export default function Education() {
                 flexDirection: 'column',
                 gap: '1.5rem'
               }}>
+                <li style={{ color: 'var(--text-primary)', fontSize: '1.1rem', fontWeight: 500, lineHeight: 1.5 }}>
+                  <span style={{ display: 'block', fontWeight: 600, color: 'var(--text-primary)' }}>Finalist — BDIC 1.0 (2025)</span>
+                  <span style={{ display: 'block', fontSize: '0.95rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>Bhashini Domain Innovation Challenge, Digital India. Recognised for healthcare domain innovation.</span>
+                </li>
+                <li style={{ width: '100%', height: '1px', background: 'var(--border-color)' }}></li>
                 <li style={{ color: 'var(--text-primary)', fontSize: '1.1rem', fontWeight: 500, lineHeight: 1.5 }}>
                   Edapt Technology Leadership Program
                 </li>

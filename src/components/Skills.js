@@ -5,29 +5,34 @@ import { Code2, Database, Layout, GitBranch, Wrench } from 'lucide-react';
 export default function Skills() {
   const skillCategories = [
     {
-      title: 'Languages',
+      title: 'Mobile Development',
       icon: <Code2 size={20} />,
-      skills: ['Python', 'JavaScript', 'Dart']
+      skills: ['Flutter', 'Dart', 'Provider', 'BLoC', 'REST API Integration']
     },
     {
-      title: 'API & Architecture',
+      title: 'Backend Development',
       icon: <Layout size={20} />,
-      skills: ['RESTful APIs', 'GraphQL', 'RBAC', 'JWT Authentication', 'OAuth 2.0']
+      skills: ['Node.js', 'Express.js', 'FastAPI', 'GraphQL', 'RESTful APIs']
     },
     {
-      title: 'Databases & Search',
+      title: 'Databases',
       icon: <Database size={20} />,
-      skills: ['PostgreSQL', 'OpenSearch', 'Firestore', 'Hive', 'MongoDB']
+      skills: ['PostgreSQL', 'OpenSearch', 'Firestore', 'Hive', 'SQLite']
+    },
+    {
+      title: 'Auth & Security',
+      icon: <Wrench size={20} />, // You might want to use a Lock or Shield icon, but Wrench is fine for now
+      skills: ['JWT Authentication', 'OAuth 2.0', 'RBAC', 'Secure Data Handling']
     },
     {
       title: 'Cloud & DevOps',
       icon: <GitBranch size={20} />,
-      skills: ['AWS', 'Git', 'GitHub', 'GitLab']
+      skills: ['AWS Deployment', 'Git', 'GitHub', 'GitLab']
     },
     {
       title: 'Tools',
       icon: <Wrench size={20} />,
-      skills: ['Postman', 'VS Code', 'Firebase', 'Swagger', 'Antigravity']
+      skills: ['Firebase', 'Postman', 'Swagger', 'Hoppscotch', 'VS Code']
     }
   ];
 

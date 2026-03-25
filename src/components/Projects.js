@@ -5,38 +5,45 @@ import { FolderGit2, Smartphone, Globe, ArrowUpRight } from 'lucide-react';
 export default function Projects() {
   const projects = [
     {
-      title: 'Oxygen',
-      subtitle: 'Performant Web/Flutter App',
-      description: 'Developed cross-platform application utilizing advanced custom Service Workers to resolve critical browser caching issues and fixed ongoing Chromium-based scrolling virtualization bugs.',
-      tags: ['Flutter', 'Service Worker', 'Performance', 'Web'],
-      icon: <Globe size={24} />
-    },
-    {
-      title: 'Summary',
-      subtitle: 'Transcription & Processing',
-      description: 'Engineered a highly customized rich-text editor with HTML rendering. Implemented live transcription utilizing pure JavaScript to process real-time audio streams into the application architecture.',
-      tags: ['Flutter', 'JavaScript', 'HTML', 'Live Transcription'],
+      title: 'Healthcare Management',
+      subtitle: 'Unified Hospital Solution',
+      description: 'Developed Flutter modules for EMR, pharmacy systems, appointment booking, lab reports, and insurance workflows within a unified hospital management solution.',
+      tags: ['Flutter', 'Healthcare', 'EMR'],
       icon: <Smartphone size={24} />
     },
     {
-      title: 'SharedLocker',
-      subtitle: 'Secure Mobile Application',
-      description: 'Built a secure Flutter-based mobile application focused on high-level data access and intuitive UI/UX workflows for seamless digital locker management across users.',
-      tags: ['Flutter', 'Mobile App', 'UI/UX'],
+      title: 'Healthcare Search',
+      subtitle: 'OpenSearch Integration',
+      description: 'Integrated OpenSearch into the healthcare platform to enable fast, indexed search across patient records, prescriptions, and clinical data — improving retrieval speed significantly.',
+      tags: ['OpenSearch', 'Performance'],
+      icon: <Globe size={24} />
+    },
+    {
+      title: 'Shared Locker',
+      subtitle: 'Secure Patient Data Storage',
+      description: 'Built a role-based platform enabling healthcare providers to securely store and access patient medical records with strict RBAC controls.',
+      tags: ['Flutter', 'Security', 'RBAC'],
       icon: <Smartphone size={24} />
     },
     {
       title: 'Diagnize',
-      subtitle: 'Healthcare/Diagnostics',
-      description: 'Developed mobile healthcare application using Flutter, maintaining a strict focus on highly responsive design criteria and reliable, low-latency performance required for medical contexts.',
-      tags: ['Flutter', 'Mobile App', 'Healthcare'],
+      subtitle: 'Doctor Consultation Platform',
+      description: 'Implemented a doctor-patient communication system with digital prescription generation and appointment scheduling.',
+      tags: ['Flutter', 'Healthcare'],
       icon: <Smartphone size={24} />
+    },
+    {
+      title: 'Summaryz',
+      subtitle: 'Discharge Summary Generator',
+      description: 'Developed automated generation of structured hospital discharge summaries, reducing manual documentation time.',
+      tags: ['Automation', 'Healthcare'],
+      icon: <Globe size={24} /> 
     },
     {
       title: 'SellOps',
       subtitle: 'SaaS Platform',
-      description: 'Architected and deployed a multi-tenant backend using Node.js, Express, and PostgreSQL. Features secure JWT/OAuth 2.0 authentication spread across a highly scalable AWS production environment.',
-      tags: ['Node.js', 'Express', 'PostgreSQL', 'AWS'],
+      description: 'Architected and deployed a multi-tenant backend using Node.js, Express, and PostgreSQL. Features secure JWT/OAuth 2.0 authentication and utilized Docker containerization spread across a highly scalable AWS production environment.',
+      tags: ['Node.js', 'Express', 'PostgreSQL', 'Docker'],
       icon: <FolderGit2 size={24} />
     },
     {

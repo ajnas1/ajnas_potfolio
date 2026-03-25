@@ -86,13 +86,13 @@ export default function Hero() {
           </h1>
 
           <p style={{
-            fontSize: '1.25rem',
+            fontSize: '1.15rem',
             color: 'var(--text-secondary)',
             marginBottom: '3rem',
-            maxWidth: '600px',
-            lineHeight: 1.7
+            maxWidth: '650px',
+            lineHeight: 1.8
           }}>
-            I'm Ajnas, a Backend & Flutter Developer specialized in designing robust RESTful and GraphQL APIs, optimizing databases, and engineering high-performance cross-platform applications.
+            Full Stack Developer with 1+ year of experience building scalable mobile and backend systems using Flutter, Node.js, and FastAPI. Specialized in healthcare platforms (EMR, pharmacy, lab, insurance) with expertise in OpenSearch, secure APIs (JWT/OAuth), PostgreSQL, and Docker; contributed to an award-winning Digital India (BDIC 1.0) healthcare product.
           </p>
 
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>

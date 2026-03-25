@@ -6,31 +6,35 @@ export default function Experience() {
     {
       title: 'Flutter Developer',
       company: 'Lifosys Digital Systems',
-      date: '2025 - Present',
+      date: 'Feb 2025 - Present',
       points: [
-        'Designed scalable backend APIs using Python (FastAPI) for secure document management.',
-        'Built APIs with robust request validation, authentication, and error handling.',
-        'Integrated PostgreSQL and OpenSearch for advanced querying and performance optimization.',
-        'Developed JWT-based secure access control across full-stack architecture.'
+        'Developed healthcare mobile applications supporting hospital workflows and patient management systems.',
+        'Built modules for pharmacy management, appointment booking, EMR records, laboratory workflows, and insurance processing.',
+        'Integrated OpenSearch to power fast, scalable search across patient records, medical data, and healthcare workflows.',
+        'Integrated secure backend APIs to manage real-time healthcare data and medical records.',
+        'Collaborated with backend teams to optimise application performance and data synchronisation.',
+        'Product recognised as a Finalist in the Bhashini Domain Innovation Challenge (BDIC 1.0), Digital India.'
       ]
     },
     {
-      title: 'Flutter Developer',
+      title: 'Flutter Developer (Part-time)',
       company: 'Trilia Solutions',
-      date: '2024 - 2025',
+      date: 'Dec 2024 - Jan 2025',
       points: [
-        'Developed seamless mobile applications using the Flutter framework.',
-        'Implemented advanced state management and real-time backend synchronization.'
+        'Developed cross-platform mobile applications using Flutter for client-facing products.',
+        'Integrated backend APIs and implemented responsive user interfaces.',
+        'Collaborated with designers and backend engineers to deliver scalable, production-ready applications.'
       ]
     },
     {
       title: 'Full Stack Developer Intern',
       company: 'Edapt',
-      date: '2024',
+      date: 'Apr 2024 - Dec 2024',
       points: [
-        'Built full-stack applications with Flutter (Frontend) and Node.js (Backend).',
-        'Learned robust routing, middleware, and API structure using Express.js.',
-        'Integrated Firebase Authentication and Firestore for state and database management.'
+        'Developed full-stack applications using Flutter (frontend) and Node.js (backend).',
+        'Built RESTful APIs with JWT authentication and secure data handling.',
+        'Implemented state management using Provider and BLoC architecture.',
+        'Integrated Firebase services including Authentication, Firestore, and Cloud Functions.'
       ]
     }
   ];
