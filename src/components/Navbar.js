@@ -14,13 +14,20 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const navLinks = [
-    { name: 'Skills', href: '#skills' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Education', href: '#education' },
+    { name: 'Skills', href: '#skills', id: 'skills' },
+    { name: 'Experience', href: '#experience', id: 'experience' },
+    { name: 'Projects', href: '#projects', id: 'projects' },
+    { name: 'Education', href: '#education', id: 'education' },
   ];
+
+  const handleNavClick = (e, targetId) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <>
@@ -55,6 +62,7 @@ export default function Navbar() {
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <motion.a 
             href="#home" 
+            onClick={(e) => handleNavClick(e, 'home')}
             style={{ fontSize: '1.25rem', fontWeight: 700, letterSpacing: '-0.02em', color: 'var(--text-primary)' }}
           >
             Ajnas Ashkath
@@ -66,6 +74,7 @@ export default function Navbar() {
               <a 
                 key={link.name} 
                 href={link.href} 
+                onClick={(e) => handleNavClick(e, link.id)}
                 style={{ 
                   color: 'var(--text-secondary)', 
                   fontWeight: 500, 

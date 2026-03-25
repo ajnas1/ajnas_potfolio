@@ -24,7 +24,7 @@ export default function Experience() {
       ]
     },
     {
-      title: 'Full Stack Developer',
+      title: 'Full Stack Developer Intern',
       company: 'Edapt',
       date: '2024',
       points: [

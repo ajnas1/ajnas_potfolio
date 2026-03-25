@@ -37,7 +37,10 @@ export default function Hero() {
           </p>
 
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-            <a href="#projects" className="btn-primary">
+            <a href="#projects" onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+            }} className="btn-primary">
               View Projects 
             </a>
             <a href="mailto:ajnasashkath@gmail.com" className="btn-secondary" style={{ border: 'none' }}>
