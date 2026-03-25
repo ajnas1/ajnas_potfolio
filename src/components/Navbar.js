@@ -42,11 +42,11 @@ export default function Navbar() {
           zIndex: 1000,
         }}
       />
-      <motion.nav 
+      <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        style={{ 
+        style={{
           position: 'fixed',
           top: 0,
           width: '100%',
@@ -60,8 +60,8 @@ export default function Navbar() {
         }}
       >
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <motion.a 
-            href="#home" 
+          <motion.a
+            href="#home"
             onClick={(e) => handleNavClick(e, 'home')}
             style={{ fontSize: '1.25rem', fontWeight: 700, letterSpacing: '-0.02em', color: 'var(--text-primary)' }}
           >
@@ -71,17 +71,17 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }} className="hidden-mobile">
             {navLinks.map((link) => (
-              <a 
-                key={link.name} 
-                href={link.href} 
+              <a
+                key={link.name}
+                href={link.href}
                 onClick={(e) => handleNavClick(e, link.id)}
-                style={{ 
-                  color: 'var(--text-secondary)', 
-                  fontWeight: 500, 
-                  fontSize: '0.9rem', 
-                  transition: 'color 0.2s' 
-                }} 
-                onMouseEnter={(e) => e.target.style.color = 'var(--text-primary)'} 
+                style={{
+                  color: 'var(--text-secondary)',
+                  fontWeight: 500,
+                  fontSize: '0.9rem',
+                  transition: 'color 0.2s'
+                }}
+                onMouseEnter={(e) => e.target.style.color = 'var(--text-primary)'}
                 onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
               >
                 {link.name}
@@ -92,16 +92,16 @@ export default function Navbar() {
           {/* Social Icons */}
           <div style={{ display: 'flex', gap: '1rem' }} className="hidden-mobile">
             {[
-              { icon: <Github size={18} />, url: 'https://github.com/Ajnas' },
-              { icon: <Linkedin size={18} />, url: 'https://linkedin.com/in/AjnasAshkath' },
-              { icon: <Mail size={18} />, url: 'mailto:ajnasashkath@gmail.com' }
+              { icon: <Github size={18} />, url: 'https://github.com/ajnas1' },
+              { icon: <Linkedin size={18} />, url: 'https://www.linkedin.com/in/ajnas-ashkath-b72aaa287' },
+              { icon: <Mail size={18} />, url: 'mailto:[ajnasashkath@gmail.com]' }
             ].map((social, i) => (
-              <motion.a 
+              <motion.a
                 key={i}
-                href={social.url} 
-                target={social.url.startsWith('http') ? "_blank" : "_self"} 
-                rel="noreferrer" 
-                style={{ 
+                href={social.url}
+                target={social.url.startsWith('http') ? "_blank" : "_self"}
+                rel="noreferrer"
+                style={{
                   color: 'var(--text-secondary)',
                   display: 'flex',
                   alignItems: 'center',
